@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>Alarm Clock</title>
+
+    <!--linked to js file that checks if submit button was pressed-->
+    <script src="script.js"></script>
+
+    </head>
+    <body>
+        <!-- <form action="/action_page.php"> -->
+            <fieldset>
+              <legend>Set your alarm</legend>
+              <label for = "hours"> Hours: </label><br>
+              <input type = "text" id = "hours" name = "hours"><br><br>
+              <label for = "minutes" > Minutes: </label><br>
+              <input type = "text" id = "minutes" name = "minutes"><br><br>
+              <label for = "ampm" > AM/PM: </label><br>
+              <input type = "text" id = "ampm" name = "ampm"><br><br>
+              </fieldset>
+              <!-- <input type = "submit" id="submit" value = "Submit"> -->
+          <!-- </form> -->
+          <button id = "submit" onclick="check()"> submit</button>
+  </body>
+</html>
