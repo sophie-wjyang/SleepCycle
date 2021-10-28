@@ -1,7 +1,9 @@
 <!doctype html>
 <html>
 <head>
-  <title>Example of the Authorization Code flow with Spotify</title>
+  <title>Alarm Clock</title>
+  <script src="script.js"></script>
+
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
   
@@ -19,9 +21,20 @@
 </head>
 
 <body>
+  <fieldset>
+    <legend>Set your alarm</legend>
+    <label for = "hours"> Hours: </label><br>
+    <input type = "text" id = "hours" name = "hours"><br><br>
+    <label for = "minutes" > Minutes: </label><br>
+    <input type = "text" id = "minutes" name = "minutes"><br><br>
+    <label for = "ampm" > AM/PM: </label><br>
+    <input type = "text" id = "ampm" name = "ampm"><br><br>
+    </fieldset>
+    <!-- <input type = "submit" id="submit" value = "Submit"> -->
+<!-- </form> -->
+<button id = "submit" onclick="check()"> submit</button>
   <div class="container">
     <div id="login">
-      <h1>This is an example of the Authorization Code flow</h1>
       <a href="/login" class="btn btn-primary">Log in with Spotify</a>
     </div>
     <div id="loggedin">
@@ -29,9 +42,14 @@
       </div>
       <div id="oauth">
       </div>
-      <input class = "input is-mmedium is-rounded" type = "text" id="songName" placeholder="Enter a song title" required/>
+      <div>
+        <label class="label"> Song input</label>
+        <input class = "input is-medium is-rounded is-grouped-centered" type = "text" id="songName" placeholder="Enter a song title" required/>
       <button class="btn btn-default" id="search">Search</button>
       <button class="btn btn-default" id="obtain-new-token">Obtain new token using the refresh token</button>
+
+      </div>
+      
     </div>
   </div>
   
@@ -101,10 +119,10 @@
       } else {
         if (access_token) {
           // render oauth info
-          oauthPlaceholder.innerHTML = oauthTemplate({
-            access_token: access_token,
-            refresh_token: refresh_token
-          });
+          // oauthPlaceholder.innerHTML = oauthTemplate({
+          //   access_token: access_token,
+          //   refresh_token: refresh_token
+          // });
           
           $.ajax({
             url: 'https://api.spotify.com/v1/me',
@@ -112,7 +130,7 @@
               'Authorization': 'Bearer ' + access_token
             },
             success: function(response) {
-              userProfilePlaceholder.innerHTML = userProfileTemplate(response);
+              //userProfilePlaceholder.innerHTML = userProfileTemplate(response);
               
               $('#login').hide();
               $('#loggedin').show();
@@ -171,6 +189,7 @@
       }
     })();
   </script>
+
 </body>
 </html>
 
