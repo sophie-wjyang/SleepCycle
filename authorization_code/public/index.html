@@ -28,65 +28,37 @@
       <p class="title has-text-centered"> Alarm Clock <p> 
     </div>
   </section>
-  <legend class="has-text-centered">Set your alarm</legend>
+  <legend class="has-text-centered">Settings</legend>
   <br>
   <section>
     <div class="columns">
       <div class = "column is-1"></div>
       <div class="column">
-    <fieldset>
+      <fieldset>
       
-      <label for = "hours"> Hours: </label><br>
-      <input type = "time" id = "hours" name = "hours"><br><br>
-      <label for = "minutes" > Minutes: </label><br>
-      <input type = "text" id = "minutes" name = "minutes"><br><br>
-    
-      
-      
+      <label for = "time"> Input your alarm time: </label><br>
+      <input type = "time" id = "alarm_time"><br><br>
 
-
-
-
-    <div id = "dropdown" class="dropdown is-hoverable">
-      <div class="dropdown-trigger">
-        <button class="button" aria-haspopup="true" aria-controls="dropdown">
-        <span id="ampmLabel">
-        <b>AM/PM</b>
-        </span>
-        <span class="icon is-small">
-        <i class="fa fa-angle-down" aria-hidden="true"></i>
-        </span>
-        </button>
-      </div>
-
-      <div class="dropdown-menu" id = "ampm" role="menu">
-        <div class="dropdown-content">
-          <a id = "am" class="dropdown-item" onclick="getAM()">
-            AM
-          </a>
-          <a id = "pm" class="dropdown-item" onclick="getPM()">
-            PM
-          </a>
-       
-      </div>
-    </div>
-
-
-
-
-
+      <label for = "time"> Input your sleep time: </label><br>
+      <input type = "time" id = "sleep_time"><br><br>
       </fieldset>
       <br>
-     <button class="btn btn-default" id = "submit" onclick="check()"> submit</button>
+      <button class="btn btn-default" id = "submit" onclick="submit()"> submit</button>
       <br><br>
-      <legend class="has-text-centered">Song Input</legend>
-      <br>
-      <div id="login">
-        <a href="/login" class="btn btn-primary">Log in with Spotify</a>
       </div>
     
     </div>
     
+    </div>
+    <legend class="has-text-centered">Song Input</legend>
+    <div class="columns">
+      <div class = "column is-1"></div>
+      <div class="column">
+        <br>
+        <div id="login">
+        <a href="/login" class="btn btn-primary">Log in with Spotify</a>
+        </div>
+      </div>
     </div>
   <!-- </form> -->
   
