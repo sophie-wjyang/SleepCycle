@@ -55,9 +55,41 @@
       <div class = "column is-1"></div>
       <div class="column">
         <br>
+        
+
         <div id="login">
         <a href="/login" class="btn btn-primary">Log in with Spotify</a>
         </div>
+      
+      <!--temporary dropdown-->
+      <label for = "song"> Choose a song from the temporary list</label><br> 
+      <div id = "dropdown" class="dropdown is-hoverable">
+      <div class="dropdown-trigger">
+        <button class="button" aria-haspopup="true" aria-controls="dropdown">
+        <span id="songLabel">
+        Song Choice
+        </span>
+        <span class="icon is-small">
+        <i class="fa fa-angle-down" aria-hidden="true"></i>
+        </span>
+        </button>
+      </div>
+
+      <div class="dropdown-menu" id = "dropdowntemp" role="menu">
+        <div class="dropdown-content">
+          <a id = "song1" class="dropdown-item" onclick="get1()">
+            Song 1
+          </a>
+          <a id = "song2" class="dropdown-item" onclick="get2()">
+            Song 2
+          </a>
+          <a id = "song3" class="dropdown-item" onclick="get3()">
+            Song 3
+          </a>
+
+      </div>
+    </div> <!--end of temporary dropdown-->
+
       </div>
     </div>
   <!-- </form> -->
@@ -85,7 +117,7 @@
     </section>
 
     <!--spotify stuff:-->
-    <script id="user-profile-template" type="text/x-handlebars-template">
+     <!--<script id="user-profile-template" type="text/x-handlebars-template">
       <h1>Logged in as {{display_name}}</h1>
       <div class="media">
         <div class="pull-left">
@@ -220,7 +252,7 @@
           }, false);
         }
       })();
-    </script>
+    </script> -->
 
 </body>
 </html>

@@ -8,3 +8,19 @@ function submit(){
     console.log(sleep_time);
 
 };
+
+//temporary dropdown for song choice:
+function get1(){
+    console.log("Song 1 chosen");
+    document.getElementById("songLabel").innerHTML = "Song 1";
+};
+
+function get2(){
+    console.log("Song 2 chosen");
+    document.getElementById("songLabel").innerHTML = "Song 2";
+};
+
+function get3(){
+    console.log("Song 3 chosen");
+    document.getElementById("songLabel").innerHTML = "Song 3";
+};
