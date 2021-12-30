@@ -1,4 +1,4 @@
-#SleepCycle
+# SleepCycle
 SleepCycle is a sleeping assistant with multiple features, meant to be hosted on a Raspberry Pi and used with our hardware components.
 
 Wind down feature: allows users to choose wind down music/white noise/podcasts on our webapp through the integrated Spotify API
